@@ -18,7 +18,7 @@ public class AccountsDemoTest extends BaseTest {
     @Test
     @Category(Smoke.class)
     public void testPageObject() {
-        System.out.println("***************Starting the Test************");
+        System.out.println("***************Starting the Test ************");
         LoginPage lp = new LoginPage(driver);
         CustLogin custLogin = new CustLogin("hackerdemo@gmail.com","Hello123");
         ClientDetailsPage clientDetailsPage = lp.loginPage(custLogin.getUsername(),custLogin.getPassword())
