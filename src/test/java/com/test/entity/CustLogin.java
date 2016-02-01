@@ -6,7 +6,7 @@ package com.test.entity;
 public class CustLogin {
 
     String username ;
-    String password = "Hello123";
+    String password ;
 
     public CustLogin(String username,String password){
         this.username = username;
