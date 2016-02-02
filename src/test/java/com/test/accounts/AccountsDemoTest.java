@@ -26,5 +26,10 @@ public class AccountsDemoTest extends BaseTest {
         Assert.assertNotEquals(clientDetailsPage.verifyClientDataIsEdited(), client_company_name);
     }
 
+    @Test
+    public void testNonSmokeTag(){
+        System.out.println("Executed Non Smoke tag");
+    }
+
 
 }
