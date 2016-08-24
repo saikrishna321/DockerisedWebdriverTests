@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="GRID SAMPLE TEST" parallel="classes" thread-count="4">
+    <test name="GRID TEST WITH SERIAL EXECTION WITH BROWSER FF">
+        <parameter name="browserType" value="chrome"/>
+        <classes>
+            <class name="com.test.accounts.AccountsDemoTest"/>
+            <class name="com.test.accounts.AccountsDemoTest1"/>
+            <class name="com.test.accounts.AccountsDemoTest2"/>
+            <class name="com.test.accounts.AccountsDemoTest3"/>
+        </classes>
+    </test>
+</suite>

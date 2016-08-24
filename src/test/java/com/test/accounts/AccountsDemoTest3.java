@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  * Created by saikrisv on 16/10/15.
  */
-public class AccountsDemoTest extends BaseTest {
+public class AccountsDemoTest3 extends BaseTest {
 
     String client_company_name = "DemoBootCamp";
 
