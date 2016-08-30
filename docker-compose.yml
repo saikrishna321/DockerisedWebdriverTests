@@ -21,5 +21,8 @@ chromestandalone:
   image: deathbypython/chrome-selenium-awesome
   ports:
    - 4444:4444
-  command: bash -c "mvn --version"
+  volumes:
+   - .:/home
+  command: bash -c "mvn clean test -DsuiteXmlFile=testng.xml"
   tty: true
+
