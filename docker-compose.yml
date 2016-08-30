@@ -18,9 +18,9 @@ chromenode:
     - seleniumhub:hub
 
 chromestandalone:
-  image: deathbypython/chrome-selenium-awesome:latest
+  image: fastertests/awesome_chrome
   ports:
-   - 4444:4444
+   - 4444
   volumes:
    - .:/home
   command: bash -c "mvn clean test -DsuiteXmlFile=testng.xml"
