@@ -18,7 +18,7 @@ public class AccountsDemoTest2 extends BaseTest {
 
     @Test
     public void testPageObject() throws IOException {
-        System.out.println("***************Starting the Test ************");
+        System.out.println("***************Starting the Test ************"+ Thread.currentThread().getId());
         LoginPage lp = new LoginPage(driver);
         CustLogin custLogin = new CustLogin("hackerdemo@gmail.com","Hello123");
         ClientDetailsPage clientDetailsPage = lp.loginPage(custLogin.getUsername(),custLogin.getPassword())

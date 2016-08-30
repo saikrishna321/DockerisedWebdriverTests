@@ -16,3 +16,10 @@ chromenode:
     - 5900
   links:
     - seleniumhub:hub
+
+chromestandalone:
+  image: deathbypython/chrome-selenium-awesome
+  ports:
+   - 4444:4444
+  command: bash -c "mvn --version"
+  tty: true
