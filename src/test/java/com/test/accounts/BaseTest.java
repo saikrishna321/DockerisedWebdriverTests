@@ -30,7 +30,7 @@ public class BaseTest {
         }else{
             capability = DesiredCapabilities.chrome();
         }
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), capability);
+        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
         driver.get("http://accountsdemo.herokuapp.com/users/sign_in");
         //loginPage.loginPage("hackerdemo@gmail.com","Hello123",driver);
     }

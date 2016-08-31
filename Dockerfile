@@ -1,4 +1,4 @@
-FROM deathbypython/chrome-selenium-awesome
+FROM selenium/standalone-chrome
 MAINTAINER Jaydeep Chakrabarty "jaydeep.c1@gmail.com"
 
 RUN sudo apt-get update

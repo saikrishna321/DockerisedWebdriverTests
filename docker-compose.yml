@@ -6,22 +6,22 @@ seleniumhub:
 firefoxnode:
   image: selenium/node-firefox
   ports:
-    - 5900
+    - 5901
   links:
     - seleniumhub:hub
 
 chromenode:
   image: selenium/node-chrome
   ports:
-    - 5900
+    - 5901
   links:
     - seleniumhub:hub
 
 chromestandalone:
-  image: fastertests/awesome_chrome
-  ports:
-   - 4444
+  image: yegor256/java-maven
+  links:
+   - seleniumhub:localhost
   volumes:
    - .:/home
-  command: bash -c "mvn clean test -DsuiteXmlFile=testng.xml"
+  command: bash -c "cd home && mvn clean test -DsuiteXmlFile=testng.xml"
 
