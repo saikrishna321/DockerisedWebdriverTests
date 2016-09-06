@@ -17,11 +17,11 @@ chromenode:
   links:
     - seleniumhub:hub
 
-chromestandalone:
+functionaltest:
   image: yegor256/java-maven
   links:
    - seleniumhub:localhost
+  container_name: tests
   volumes:
    - .:/home
   command: bash -c "cd home && mvn clean test -DsuiteXmlFile=testng.xml"
-
