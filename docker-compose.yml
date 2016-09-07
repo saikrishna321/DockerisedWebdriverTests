@@ -2,26 +2,33 @@ seleniumhub:
   image: selenium/hub
   ports:
     - 4444:4444
+  environment:
+    - no_proxy=localhost
 
 firefoxnode:
-  image: selenium/node-firefox
+  image: selenium/node-firefox-debug
   ports:
-    - 5901
+    - 4577
+  environment:
+    - no_proxy=localhost
   links:
     - seleniumhub:hub
 
 chromenode:
-  image: selenium/node-chrome
+  image: selenium/node-chrome-debug
   ports:
-    - 5901
+    - 4578
+  environment:
+    - no_proxy=localhost
   links:
     - seleniumhub:hub
 
 functionaltest:
-  image: yegor256/java-maven
+  image: fastertests/m2repo
   links:
    - seleniumhub:localhost
   container_name: tests
   volumes:
    - .:/home
+   - ./seluser/.m2:/root/.m2
   command: bash -c "cd home && mvn clean test -DsuiteXmlFile=testng.xml"
