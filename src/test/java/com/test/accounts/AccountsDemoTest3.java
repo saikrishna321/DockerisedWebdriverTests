@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class AccountsDemoTest3 extends BaseTest {
 
-    String client_company_name = "DemoBootCamp";
+    String client_company_name = "BootCampTW";
 
 
     @Test

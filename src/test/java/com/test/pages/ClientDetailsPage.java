@@ -27,15 +27,15 @@ public class ClientDetailsPage {
         driver.findElement(By.className("headerAfter")).click();
         driver.findElement(By.id("client_company_name")).sendKeys("");
         driver.findElement(By.id("client_company_name")).sendKeys("DemoBootCamp" + "1");
-        driver.findElement(By.name("commit")).click();
+        driver.findElement(By.xpath("name")).click();
         return new ClientDetailsPage(driver);
 
     }
 
     public String verifyClientDataIsEdited(){
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".col-md-6.col-md-offset-2.companyName")));
-        String client_name = driver.findElement(By.cssSelector(".col-md-6.col-md-offset-2.companyName")).getText();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("html/body/div[1]/div/div[2]/table/tbody/tr[1]/td[2]")));
+        String client_name = driver.findElement(By.xpath("html/body/div[1]/div/div[2]/table/tbody/tr[1]/td[2]")).getText();
         return client_name;
     }
 
