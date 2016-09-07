@@ -1,6 +1,8 @@
 # Snap-CI-AccountsDemoTest running within Docker Container in Parallel
 
-This is a sample repo which runs selenium webdriver tests inside docker container.
+This is a sample repo which runs selenium WebDriver tests inside docker container.
+
+Make sure you have docker installed on your machine.
 
 ## Run Command
 
