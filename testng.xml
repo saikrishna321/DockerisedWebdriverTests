@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="GRID SAMPLE TEST" parallel="tests" thread-count="4">
-    <test name="Chrome Tests">
+<suite name="GRID SAMPLE TEST" parallel="tests" thread-count="2">
+    <test name="Chrome Tests" parallel="classes" thread-count="4">
         <parameter name="browserType" value="chrome"/>
         <classes>
             <class name="com.test.accounts.AccountsDemoTest"/>
@@ -10,15 +10,13 @@
             <class name="com.test.accounts.AccountsDemoTest3"/>
         </classes>
     </test>
-
-    <test name = "Firefox Tests">
-        <parameter name="browserType" value="firefox">
-            <classes>
-              <class name="com.test.accounts.AccountsDemoTest"/>
-              <class name="com.test.accounts.AccountsDemoTest1"/>
-              <class name="com.test.accounts.AccountsDemoTest2"/>
-              <class name="com.test.accounts.AccountsDemoTest3"/>
-            </classes>
-        </parameter>
+    <test name="Firefox Tests" parallel="classes" thread-count="4">
+        <parameter name="browserType" value="firefox"/>
+        <classes>
+            <class name="com.test.accounts.AccountsDemoTest"/>
+            <class name="com.test.accounts.AccountsDemoTest1"/>
+            <class name="com.test.accounts.AccountsDemoTest2"/>
+            <class name="com.test.accounts.AccountsDemoTest3"/>
+        </classes>
     </test>
 </suite>

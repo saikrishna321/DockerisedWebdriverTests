@@ -23,13 +23,6 @@ public class AccountsDemoTest extends BaseTest {
         CustLogin custLogin = new CustLogin("hackerdemo@gmail.com","Hello123");
         ClientDetailsPage clientDetailsPage = lp.loginPage(custLogin.getUsername(),custLogin.getPassword())
                 .searchClients("DemoBootCamp").editClientsDetails();
-        Assert.assertNotEquals(clientDetailsPage.verifyClientDataIsEdited(), client_company_name);
+        Assert.assertEquals(clientDetailsPage.verifyClientDataIsEdited(), client_company_name);
     }
-
-    @Test
-    public void testNonSmokeTag(){
-        System.out.println("Executed Non Smoke tag");
-    }
-
-
 }
