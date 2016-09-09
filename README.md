@@ -25,4 +25,4 @@ $ docker port <container-name|container-id> 5900
 When you are prompted for the password it is "secret", which will bring the container view.
 
 
-[![ScreenShot](https://j.gifs.com/lYw3w5.gif)](https://youtu.be/gUnau-CXPyI)
+[![ScreenShot](https://j.gifs.com/BBZWZJ.gif)](https://youtu.be/gUnau-CXPyI)
