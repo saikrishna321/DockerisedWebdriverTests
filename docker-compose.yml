@@ -1,12 +1,12 @@
 seleniumhub:
-  image: selenium/hub
+  image: selenium/hub:3.0.0-dubnium
   ports:
     - 4444:4444
   environment:
     - no_proxy=localhost
 
 firefoxnode:
-  image: selenium/node-firefox-debug
+  image: selenium/node-firefox-debug:3.0.0-dubnium
   ports:
     - 5900
   environment:
@@ -15,7 +15,7 @@ firefoxnode:
     - seleniumhub:hub
 
 chromenode:
-  image: selenium/node-chrome-debug
+  image: selenium/node-chrome-debug:3.0.0-dubnium
   ports:
     - 5900
   environment:
